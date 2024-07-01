@@ -1,0 +1,22 @@
+<h1>Reactive Form 2</h1>
+<p>Reactive Form <strong>with Validators</strong></p>
+
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+  <div class="mb-3">
+    <label class="form-label">Comment</label>
+    <textarea formControlName="comment" class="form-control"
+              [class.is-invalid]="formGroup.controls.comment.invalid"></textarea>
+
+    <small class="text-danger" *ngIf="formGroup.controls.comment.invalid">
+      <ng-container *ngIf="formGroup.controls.comment.hasError('required')">
+        The comment is required
+      </ng-container>
+      <ng-container *ngIf="formGroup.controls.comment.hasError('minlength')">
+        The comment must have a minimum of 3 characters
+      </ng-container>
+    </small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

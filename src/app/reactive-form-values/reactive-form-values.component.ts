@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-reactive-form-1',
+  selector: 'app-reactive-form-values',
   standalone: true,
   templateUrl: './reactive-form-values.component.html',
   imports: [ReactiveFormsModule],

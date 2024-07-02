@@ -17,8 +17,8 @@ export class ReactiveForm4Component {
   totalPrice = 0;
 
   constructor() {
-    this.formGroup.valueChanges.subscribe((value) => {
-      this.totalPrice = value.price! * value.quantity!;
+    this.formGroup.valueChanges.subscribe((formGroupValue) => {
+      this.totalPrice = formGroupValue.price! * formGroupValue.quantity!;
     });
   }
 }

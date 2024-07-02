@@ -15,7 +15,6 @@ export class ReactiveForm1Component {
   });
 
   onSubmit() {
-    this.formGroup.reset();
-    console.log(this.formGroup.value); // { firstname: 'John', lastname: 'Doe', age: 30 }
+    console.log(this.formGroup.value);
   }
 }

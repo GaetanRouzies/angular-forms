@@ -4,8 +4,8 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 
   <div class="mb-3">
-    <label class="form-label">Title</label>
-    <input formControlName="title" class="form-control"
+    <label for="title" class="form-label">Title</label>
+    <input id="title" formControlName="title" class="form-control"
            [class.is-invalid]="isInvalidAndTouchedOrDirty(formGroup.controls.title)" />
     <small class="text-danger" *ngIf="isInvalidAndTouchedOrDirty(formGroup.controls.title)">
       The title is required
@@ -13,8 +13,8 @@
   </div>
 
   <div class="mb-3">
-    <label class="form-label">Comment</label>
-    <textarea formControlName="comment" class="form-control"
+    <label for="comment" class="form-label">Comment</label>
+    <textarea id="comment" formControlName="comment" class="form-control"
               [class.is-invalid]="isInvalidAndTouchedOrDirty(formGroup.controls.comment)"></textarea>
     <small class="text-danger" *ngIf="isInvalidAndTouchedOrDirty(formGroup.controls.comment)">
       <ng-container *ngIf="formGroup.controls.comment.hasError('required')">

@@ -3,16 +3,16 @@
 
 <form (ngSubmit)="onSubmit()">
   <div class="mb-3">
-    <label class="form-label">Firstname</label>
-    <input type="text" [(ngModel)]="firstname" name="firstname" class="form-control" />
+    <label for="firstname" class="form-label">Firstname</label>
+    <input id="firstname" type="text" [(ngModel)]="firstname" name="firstname" class="form-control" />
   </div>
   <div class="mb-3">
-    <label class="form-label">Lastname</label>
-    <input type="text" [(ngModel)]="lastname" name="lastname" class="form-control" />
+    <label for="lastname" class="form-label">Lastname</label>
+    <input id="lastname" type="text" [(ngModel)]="lastname" name="lastname" class="form-control" />
   </div>
   <div class="mb-3">
-    <label class="form-label">Age</label>
-    <input type="number" [(ngModel)]="age" name="age" class="form-control" />
+    <label for="age" class="form-label">Age</label>
+    <input id="age" type="number" [(ngModel)]="age" name="age" class="form-control" />
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>

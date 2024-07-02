@@ -4,8 +4,8 @@
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 
   <div class="mb-3">
-    <label class="form-label">Comment</label>
-    <textarea formControlName="comment" class="form-control"
+    <label for="comment" class="form-label">Comment</label>
+    <textarea id="comment" formControlName="comment" class="form-control"
               [class.is-invalid]="formGroup.controls.comment.invalid"></textarea>
 
     <small class="text-danger" *ngIf="formGroup.controls.comment.invalid">

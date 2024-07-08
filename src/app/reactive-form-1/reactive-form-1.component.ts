@@ -8,6 +8,7 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
   imports: [ReactiveFormsModule],
 })
 export class ReactiveForm1Component {
+
   formGroup = new FormGroup({
     firstname: new FormControl(''),
     lastname: new FormControl(''),

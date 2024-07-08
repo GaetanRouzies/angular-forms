@@ -23,6 +23,7 @@ export class ReactiveForm3Component {
     if (this.formGroup.invalid) {
       return;
     }
+    console.log(this.formGroup.value);
   }
 
 }

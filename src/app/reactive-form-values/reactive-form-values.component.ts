@@ -13,18 +13,19 @@ export class ReactiveFormValuesComponent {
     // Example 1 : By Default, a FormControl is nullable
     const firstname = new FormControl('John');
     firstname.value; // 'John' (type: string | null)
+    firstname.value?.substring(1); // Error : Object is possibly 'null'
 
     firstname.reset();
     firstname.value; // null
-    firstname.value?.substring(1); // Error : Object is possibly 'null'
 
     // Example 2 : We can create a nonNullable FormControl
     const lastname = new FormControl('John', { nonNullable: true });
     lastname.value; // 'John' (type: string)
+    lastname.value.substring(1); // 'ohn'
 
     lastname.reset();
     lastname.value; // ''
-    lastname.value.substring(1); // 'ohn'
+
 
     // Example 3 : FormGroup.value returns undefined when a FormControl is disabled
     const formGroup = new FormGroup({

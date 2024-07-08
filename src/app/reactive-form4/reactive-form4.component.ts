@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-reactive-form-4',
+  selector: 'app-reactive-form4',
   standalone: true,
   templateUrl: './reactive-form4.component.html',
   imports: [ReactiveFormsModule, CommonModule],

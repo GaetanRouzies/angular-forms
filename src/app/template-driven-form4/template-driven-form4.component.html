@@ -1,0 +1,20 @@
+<h1>Reactive Form 4</h1>
+<p>Reactive Form <strong>with ValueChanges</strong></p>
+
+<form #formGroup="ngForm">
+  <div class="row mb-3">
+    <div class="col">
+      <label for="price" class="form-label">Price</label>
+      <input id="price" type="number" [(ngModel)]="price" name="price" class="form-control" />
+    </div>
+    <div class="col">
+      <label for="quantity" class="form-label">Quantity</label>
+      <input id="quantity" type="number" [(ngModel)]="quantity" name="quantity"  class="form-control" />
+    </div>
+  </div>
+  <div class="mb-3">
+    <div>Total price : {{ totalPrice }} €</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

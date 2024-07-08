@@ -8,6 +8,7 @@ import {TemplateDrivenForm1Component} from './template-driven-form1/template-dri
 import {HtmlFormComponent} from './html-form/html-form.component';
 import {TemplateDrivenForm2Component} from "./template-driven-form2/template-driven-form2.component";
 import {TemplateDrivenForm3Component} from "./template-driven-form3/template-driven-form3.component";
+import {TemplateDrivenForm4Component} from "./template-driven-form4/template-driven-form4.component";
 
 export const routes: Routes = [
   {path: '', redirectTo: '/html-form', pathMatch: 'full'},
@@ -15,9 +16,10 @@ export const routes: Routes = [
   {path: 'template-driven-form1', component: TemplateDrivenForm1Component},
   {path: 'template-driven-form2', component: TemplateDrivenForm2Component},
   {path: 'template-driven-form3', component: TemplateDrivenForm3Component},
-  {path: 'reactive-form-1', component: ReactiveForm1Component},
-  {path: 'reactive-form-2', component: ReactiveForm2Component},
-  {path: 'reactive-form-3', component: ReactiveForm3Component},
-  {path: 'reactive-form-4', component: ReactiveForm4Component},
+  {path: 'template-driven-form4', component: TemplateDrivenForm4Component},
+  {path: 'reactive-form1', component: ReactiveForm1Component},
+  {path: 'reactive-form2', component: ReactiveForm2Component},
+  {path: 'reactive-form3', component: ReactiveForm3Component},
+  {path: 'reactive-form4', component: ReactiveForm4Component},
   {path: 'reactive-form-values', component: ReactiveFormValuesComponent},
 ];

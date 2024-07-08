@@ -3,7 +3,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-reactive-form-3',
+  selector: 'app-reactive-form3',
   standalone: true,
   templateUrl: './reactive-form3.component.html',
   imports: [ReactiveFormsModule, CommonModule],

@@ -9,15 +9,13 @@ import {FormsModule, NgForm} from '@angular/forms';
 })
 export class TemplateDrivenForm4Component implements OnInit {
 
-  @ViewChild('formGroup', { static: true }) formGroup!: NgForm;
+  @ViewChild('ngForm', { static: true }) ngForm!: NgForm;
   price = 0;
   quantity = 0;
-
   totalPrice = 0;
 
   ngOnInit() {
-    this.formGroup.form.valueChanges.subscribe((formGroupValue) => {
-      console.log(formGroupValue);
+    this.ngForm.form.valueChanges.subscribe((formGroupValue) => {
       this.totalPrice = formGroupValue.price! * formGroupValue.quantity!;
     });
   }

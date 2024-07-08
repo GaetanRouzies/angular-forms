@@ -10,7 +10,7 @@ import {CommonModule} from '@angular/common';
 })
 export class TemplateDrivenForm3Component {
 
-  @ViewChild('formGroup') formGroup!: NgForm;
+  @ViewChild('ngForm') ngForm!: NgForm;
   title = '';
   comment = '';
 
@@ -19,11 +19,11 @@ export class TemplateDrivenForm3Component {
   }
 
   onSubmit() {
-    this.formGroup.form.markAllAsTouched();
-    if (this.formGroup.form.invalid) {
+    this.ngForm.form.markAllAsTouched();
+    if (this.ngForm.form.invalid) {
       return;
     }
-    console.log(this.formGroup.form.value);
+    console.log(this.ngForm.form.value);
   }
 
 }

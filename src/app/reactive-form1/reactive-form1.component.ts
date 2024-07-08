@@ -4,7 +4,7 @@ import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-reactive-form-1',
   standalone: true,
-  templateUrl: './reactive-form-1.component.html',
+  templateUrl: './reactive-form1.component.html',
   imports: [ReactiveFormsModule],
 })
 export class ReactiveForm1Component {

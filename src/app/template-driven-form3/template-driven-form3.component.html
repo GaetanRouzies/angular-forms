@@ -1,0 +1,30 @@
+<h1>Reactive Form 3</h1>
+<p>Reactive Form <strong>with Validators + Show error on touched and dirty</strong></p>
+
+<form (ngSubmit)="onSubmit()" #formGroup="ngForm">
+
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input id="title" #titleControl="ngModel" [(ngModel)]="title" name="title" class="form-control"
+           required [class.is-invalid]="isInvalidAndTouchedOrDirty(titleControl.control)"/>
+    <small class="text-danger" *ngIf="isInvalidAndTouchedOrDirty(titleControl.control)">
+      The title is required
+    </small>
+  </div>
+
+  <div class="mb-3">
+    <label for="comment" class="form-label">Comment</label>
+    <textarea id="comment" #commentControl="ngModel" [(ngModel)]="comment" name="comment"  class="form-control"
+              required minlength="3" [class.is-invalid]="isInvalidAndTouchedOrDirty(commentControl.control)"></textarea>
+    <small class="text-danger" *ngIf="isInvalidAndTouchedOrDirty(commentControl.control)">
+      <ng-container *ngIf="commentControl.control.hasError('required')">
+        The comment is required
+      </ng-container>
+      <ng-container *ngIf="commentControl.control.hasError('minlength')">
+        The comment must have a minimum of 3 characters
+      </ng-container>
+    </small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

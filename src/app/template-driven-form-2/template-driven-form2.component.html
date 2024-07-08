@@ -1,0 +1,19 @@
+<h1>Template Driven Form</h1>
+<p>Simple Template Driven Form with ngModel</p>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="firstname" class="form-label">Firstname</label>
+    <input id="firstname" type="text" [(ngModel)]="firstname" name="firstname" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="lastname" class="form-label">Lastname</label>
+    <input id="lastname" type="text" [(ngModel)]="lastname" name="lastname" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input id="age" type="number" [(ngModel)]="age" name="age" class="form-control" />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

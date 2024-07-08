@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-template-driven-form',
+  selector: 'app-template-driven-form1',
   standalone: true,
-  templateUrl: './template-driven-form.component.html',
+  templateUrl: './template-driven-form1.component.html',
   imports: [FormsModule],
 })
-export class TemplateDrivenFormComponent {
+export class TemplateDrivenForm1Component {
   firstname = '';
   lastname = '';
   age = 0;

@@ -4,14 +4,14 @@
 <form (ngSubmit)="onSubmit()">
   <div class="mb-3">
     <label for="comment" class="form-label">Comment</label>
-    <textarea id="comment" #commentControl="ngModel" [(ngModel)]="comment" name="comment" class="form-control"
-              [class.is-invalid]="commentControl.invalid" required minlength="3"></textarea>
+    <textarea id="comment" #commentNgModel="ngModel" [(ngModel)]="comment" name="comment" class="form-control"
+              [class.is-invalid]="commentNgModel.invalid" required minlength="3"></textarea>
 
-    <small class="text-danger" *ngIf="commentControl.invalid">
-      <ng-container *ngIf="commentControl.hasError('required')">
+    <small class="text-danger" *ngIf="commentNgModel.invalid">
+      <ng-container *ngIf="commentNgModel.hasError('required')">
         The comment is required
       </ng-container>
-      <ng-container *ngIf="commentControl.hasError('minlength')">
+      <ng-container *ngIf="commentNgModel.hasError('minlength')">
         The comment must have a minimum of 3 characters
       </ng-container>
     </small>
